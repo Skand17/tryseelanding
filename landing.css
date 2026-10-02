@@ -211,3 +211,16 @@ svg { max-width: 100%; }
 .card.soon h3 { margin: 0 0 10px; font-size: 24px; letter-spacing: -.02em; }
 .card.soon p { margin: 0 0 22px; font-size: 15.5px; line-height: 1.55; color: var(--muted); }
 .card.soon .btn { width: 100%; height: 50px; margin-top: 10px; }
+
+/* "Add Trysee to Chrome" dialog: plain steps for visitors */
+.card.get { padding: 30px 28px 24px; width: 480px; }
+.card.get h3 { margin: 0 24px 16px 0; font-size: 24px; letter-spacing: -.02em; }
+.get-steps { list-style: none; counter-reset: g; padding: 0; margin: 0 0 20px; }
+.get-steps li { counter-increment: g; position: relative; padding: 0 0 14px 42px; font-size: 15px; line-height: 1.45; }
+.get-steps li::before { content: counter(g); position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+.get-steps li > b { display: block; font-size: 16px; }
+.get-steps span b { color: var(--ink); }
+.get-steps span { color: var(--muted); }
+.get-steps em { font-style: normal; font-weight: 600; color: var(--ink); }
+.card.get .btn { width: 100%; height: 52px; }
+.get-tip { margin: 14px 0 0; font-size: 13px; color: #8a7f81; text-align: center; }

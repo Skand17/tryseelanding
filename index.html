@@ -338,24 +338,28 @@
 <div class="fit-tab" id="fit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg> AI fitting room <button id="fitX" aria-label="Hide">✕</button></div>
 
 <div class="modal" id="modal" hidden>
-  <div class="card soon" role="dialog" aria-modal="true" aria-labelledby="soonTitle">
+  <div class="card get" role="dialog" aria-modal="true" aria-labelledby="getTitle">
     <button class="close" id="mClose" aria-label="Close">✕</button>
-    <div class="soon-ico" aria-hidden="true">✦</div>
-    <h3 id="soonTitle">Coming soon to the Chrome Web Store</h3>
-    <p>Trysee is almost ready for Chrome. Want a heads-up the moment it is live? Drop us a line and we will let you know.</p>
-    <a class="btn dark" href="mailto:skandbuilds@gmail.com?subject=Notify%20me%20when%20Trysee%20is%20live&body=Please%20email%20me%20when%20Trysee%20is%20available%20on%20the%20Chrome%20Web%20Store.">Notify me</a>
-    <button class="btn light" id="mClose2" type="button">Close</button>
+    <h3 id="getTitle">Add Trysee to Chrome</h3>
+    <ol class="get-steps">
+      <li><b>Open the Chrome Web Store</b><span>Search for <em>Trysee</em> and open the extension page.</span></li>
+      <li><b>Click “Add to Chrome”</b><span>Then confirm with “Add extension”. It takes a few seconds.</span></li>
+      <li><b>Open any online store</b><span>Click the <b>AI fitting room</b> tab on the left edge of the page and allow your camera.</span></li>
+      <li><b>Press “Try with Trysee”</b><span>Hover a clothing photo and press the button, or drag the photo into the fitting room.</span></li>
+    </ol>
+    <a class="btn dark" id="storeLink" href="https://chromewebstore.google.com/search/Trysee" target="_blank" rel="noopener">Open Chrome Web Store</a>
+    <p class="get-tip">Tip: pin Trysee from the puzzle-piece menu to keep it one click away.</p>
   </div>
 </div>
 <script src="landing.js"></script>
 <script>
   const m = document.getElementById('modal');
-  // When the Chrome Web Store listing is live, put its URL here: every "Add to Chrome" button then goes straight to the store.
+  // Paste the exact Chrome Web Store listing URL here: every "Add to Chrome" button then goes straight to it and this dialog is skipped.
   const CHROME_STORE_URL = "";
+  if (CHROME_STORE_URL) document.getElementById('storeLink').href = CHROME_STORE_URL;
   const install = () => { document.getElementById('tm').hidden = true; document.body.style.overflow = ""; if (CHROME_STORE_URL) location.href = CHROME_STORE_URL; else m.hidden = false; };
   for (const id of ['install', 'install2', 'install3']) document.getElementById(id).onclick = install;
   document.getElementById('mClose').onclick = () => m.hidden = true;
-  document.getElementById('mClose2').onclick = () => m.hidden = true;
   m.onclick = e => { if (e.target === m) m.hidden = true; };
   document.getElementById('fitX').onclick = () => document.getElementById('fit').remove();
   document.getElementById('yr').textContent = new Date().getFullYear();
