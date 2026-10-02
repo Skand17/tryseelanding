@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example Store – Trysee demo</title>
+<style>
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Inter, sans-serif; color: #1c0609; background: #faf8f7; }
+  header { padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 1px solid #eee; }
+  header .logo { font: 500 28px Georgia, serif; letter-spacing: -1px; color: inherit; text-decoration: none; }
+  .back { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1px solid #d9cfd3; border-radius: 99px; font-size: 14px; font-weight: 600; color: #1c0609; text-decoration: none; background: #fff; }
+  .back:hover { background: #1c0609; color: #fff; border-color: #1c0609; }
+  .left { display: flex; align-items: center; gap: 20px; }
+  .works { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .works span { padding: 4px 12px; border-radius: 99px; background: #f6efe9; font-size: 12.5px; font-weight: 600; letter-spacing: .02em; }
+  .note { max-width: 760px; margin: 28px auto 8px; padding: 14px 18px; background: #fff; border: 1px solid #eadfe4; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+  .grid { max-width: 1000px; margin: 20px auto; padding: 0 20px 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 20px; }
+  figure { margin: 0; background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #eee; }
+  figure img { width: 100%; display: block; aspect-ratio: 3/4; object-fit: cover; }
+  figcaption { padding: 12px 14px; font-size: 14px; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header><div class="left"><a class="back" href="index.html" aria-label="Back to the Trysee home page">← Back</a><a class="logo" href="index.html">Trysee</a></div><span>Example store</span></header>
+<div class="note">
+  <b>Demo store.</b> With the extension installed and set up, hover a product photo and click <b>Try with Trysee</b>,
+  or drag it onto the <b>AI fitting room</b> tab at the left edge of the screen.
+  <div class="works"><span>Works the same on Amazon</span><span>Flipkart</span><span>Myntra</span><span>Zara</span><span>Nike</span><span>Meesho</span><span>and any shop with product photos</span></div>
+</div>
+<div class="grid">
+  <figure><img src="img/tee.png" alt="Crimson tee"><figcaption><span>Crimson Tee</span><b>$32</b></figcaption></figure>
+  <figure><img src="img/dress.png" alt="Navy dress"><figcaption><span>Navy Midi Dress</span><b>$88</b></figcaption></figure>
+  <figure><img src="img/trousers.png" alt="Olive trousers"><figcaption><span>Olive Trousers</span><b>$64</b></figcaption></figure>
+  <figure><img src="img/jacket.png" alt="Tan jacket"><figcaption><span>Tan Jacket</span><b>$120</b></figcaption></figure>
+</div>
+</body>
+</html>

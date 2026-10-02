@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trysee – See the clothes on you, on any store</title>
+<meta name="description" content="Trysee is a Chrome extension that shows you wearing clothes from Amazon, Myntra, AJIO and any online store. Press Try with Trysee and see it on you, live or as a photo.">
+<meta property="og:title" content="Trysee – See the clothes on you, on any store">
+<meta property="og:description" content="Find something on your favorite store. Press Try with Trysee. See how it looks on you before you buy.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<!-- ============================ HERO: see the clothes on you ============================ -->
+<main class="split">
+  <section class="left">
+    <a class="logo" href="index.html">Trysee</a>
+
+    <div class="hero">
+      <h1>See the clothes on you.<br>On any store.</h1>
+      <p class="sub">Find something on Amazon, Myntra, AJIO or any shop. Press <b>Try with Trysee</b> and see how it looks on you, live or as a photo, before you buy.</p>
+
+      <div class="cta">
+        <button class="btn dark" id="install">
+          <svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#fff"/>
+            <path d="M24 2a22 22 0 0 1 19 11H24z" fill="#ea4335"/>
+            <path d="M43 13a22 22 0 0 1-9.5 30.5L24 27z" fill="#fbbc05"/>
+            <path d="M33.5 43.5A22 22 0 0 1 5 35l9.5-16.5L24 27z" fill="#34a853"/>
+            <circle cx="24" cy="24" r="9" fill="#4285f4" stroke="#fff" stroke-width="3"/>
+          </svg>
+          Add to Chrome
+        </button>
+        <a class="btn light" href="example.html">Try Example</a>
+      </div>
+
+      <div class="flow" aria-label="How it works: any store, Try with Trysee, Trysee AI, you">
+        <span>Any store</span><i>→</i><span>Try with Trysee</span><i>→</i><span>Trysee AI</span><i>→</i><span class="you">You</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="right">
+    <div class="beta"><span>✦</span> 1 free try-on to start. No card needed.</div>
+
+    <div class="browser h-browser" role="img" aria-label="Animated illustration: on a shopping page for a cotton shirt, the Try with Trysee button is pressed and the Trysee fitting room opens showing you wearing the shirt.">
+      <div class="bar">
+        <i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i>
+        <div class="url">myntra.com/men/shirts/oversized-cotton-shirt</div>
+      </div>
+      <div class="h-page" aria-hidden="true">
+        <div class="h-head"><b>MYNTRA</b><span>Men</span><span>Women</span><span>Kids</span><span>Home</span><em>Bag</em></div>
+        <div class="h-pdp">
+          <div class="h-img"></div>
+          <div class="h-info">
+            <small>Men / Shirts</small>
+            <h4>Men's Oversized Cotton Shirt</h4>
+            <div class="h-price">₹1,299 <s>₹2,599</s> <em>50% OFF</em></div>
+            <div class="h-sizes"><span>S</span><span>M</span><span class="sel">L</span><span>XL</span></div>
+            <div class="h-btns"><span class="h-bag">Add to Bag</span><span class="h-try">✦ Try with Trysee</span></div>
+            <div class="h-float">Works directly on your shopping page</div>
+          </div>
+        </div>
+        <div class="h-room">
+          <div class="h-rhead"><span>Trysee</span><span class="h-live"><b></b>LIVE</span></div>
+          <div class="h-rbody"><div class="h-me"></div><div class="h-dress"><span class="h-spin"></span>Dressing you up…</div></div>
+        </div>
+        <svg class="h-cursor" viewBox="0 0 24 24" width="24" height="24"><path d="M5 3l14 8-6 1.8L9.8 19z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <p class="illus">Illustration of how Trysee works</p>
+
+    <nav class="links">
+      <a href="#stores-sec">Stores</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </section>
+</main>
+
+<!-- ============================ WORKS ACROSS YOUR FAVORITE STORES ============================ -->
+<section class="sec" id="stores-sec">
+  <div class="wrap">
+    <p class="eyebrow">Works where you shop</p>
+    <h2 class="big">Shop where you already shop.</h2>
+    <p class="lead">Browse your favorite stores, then try the products on yourself with Trysee.</p>
+    <div class="stores" id="stores"></div>
+    <p class="fine">Illustrative products and prices. Store names belong to their owners; Trysee is not affiliated with or endorsed by them.</p>
+  </div>
+</section>
+
+<!-- ============================ ONE TRYSEE, THOUSANDS OF PRODUCTS ============================ -->
+<section class="sec alt" id="tabs-sec">
+  <div class="wrap">
+    <p class="eyebrow">One Trysee. Thousands of products.</p>
+    <h2 class="big">Your virtual fitting room works where you shop.</h2>
+    <p class="lead">Find something you like on your favorite store. Open Trysee. See how it looks on you.</p>
+
+    <div class="browser t-browser">
+      <div class="t-tabs" id="tabstrip" role="tablist" aria-label="Stores"></div>
+      <div class="bar t-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><div class="url" id="t-url"></div></div>
+      <div class="t-stage" id="t-stage">
+        <div class="t-pdp">
+          <div class="t-img" id="t-img"></div>
+          <div class="t-info">
+            <small id="t-store"></small>
+            <h3 id="t-name"></h3>
+            <div class="t-price" id="t-price"></div>
+            <div class="h-sizes"><span>S</span><span>M</span><span class="sel">L</span><span>XL</span></div>
+            <div class="h-btns"><span class="h-bag">Add to Bag</span><span class="h-try pulse">✦ Try with Trysee</span></div>
+          </div>
+        </div>
+        <div class="t-room">
+          <div class="h-rhead"><span>Trysee</span><span class="h-live"><b></b>LIVE</span></div>
+          <div class="t-rbody"><div class="t-me" id="t-me"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIND SOMETHING. TRY IT INSTANTLY. ============================ -->
+<section class="sec" id="discover">
+  <div class="wrap">
+    <p class="eyebrow">Discover and try</p>
+    <h2 class="big">Find something. Try it instantly.</h2>
+    <p class="lead">See an item you like, tap Try On, and watch it appear on you. No tape measure, no guessing, no waiting for the courier.</p>
+    <div class="found" id="found"></div>
+  </div>
+</section>
+
+<!-- ============================ FROM YOUR FAVORITE STORE TO YOU ============================ -->
+<section class="sec alt" id="journey">
+  <div class="wrap">
+    <p class="eyebrow">How it feels</p>
+    <h2 class="big">From your favorite store to you.</h2>
+    <div class="journey">
+      <figure class="jp">
+        <div class="jv jv1">
+          <div class="j-tabs"><span>Amazon</span><span>Myntra</span><span>AJIO</span></div>
+          <div class="j-grid" id="j-grid"></div>
+        </div>
+        <figcaption><b>01</b> Shop<span>Browse any store like you always do.</span></figcaption>
+      </figure>
+      <figure class="jp">
+        <div class="jv jv2">
+          <div class="j-prod"><div class="j-img" id="j-img"></div>
+            <div class="j-side"><i></i><i class="w"></i><div class="h-btns"><span class="h-bag">Add to Bag</span><span class="h-try pulse">✦ Try with Trysee</span></div></div>
+          </div>
+        </div>
+        <figcaption><b>02</b> Try<span>Press the Trysee button on the product.</span></figcaption>
+      </figure>
+      <figure class="jp">
+        <div class="jv jv3">
+          <div class="j-room"><div class="h-rhead"><span>Trysee</span><span class="h-live"><b></b>LIVE</span></div><div class="j-rbody"><div class="j-me" id="j-me"></div></div></div>
+        </div>
+        <figcaption><b>03</b> See<span>The same clothes, on you.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHAT IT CAN DO ============================ -->
+<section class="sec" id="features">
+  <div class="wrap">
+    <p class="eyebrow">What Trysee can do</p>
+    <h2 class="big">Your fitting room, one click away</h2>
+    <p class="lead">Trysee is a Chrome extension. It adds an AI fitting room to the shopping pages you already use, so you can see an item on you before you buy it, without leaving the page.</p>
+
+    <div class="cards">
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m16 10 5-3v10l-5-3"/></svg></div>
+        <h3>Live video try-on</h3>
+        <p>Turn on your camera and watch the clothes change on you in real time. Move, turn and see how the item sits on your body.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+        <h3>Photo try-on</h3>
+        <p>Prefer a still? Switch to Photo mode to capture a frame and get a try-on image you can download and share.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <h3>Works on any store</h3>
+        <p>Amazon, Flipkart, Myntra, Zara, Nike, Meesho and any other site that shows product photos. No store partnership needed. Hover a photo and press <b>Try with Trysee</b>, or drag it in.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M3 14l1-6M21 14l-1-6"/></svg></div>
+        <h3>Clothes, glasses and more</h3>
+        <p>Shirts, tees, jackets, hoodies and dresses, plus glasses and accessories. Results are best on tops and outerwear.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M17 3l4 4-4 4M21 7H9a5 5 0 0 0-5 5M7 21l-4-4 4-4M3 17h12a5 5 0 0 0 5-5"/></svg></div>
+        <h3>Swap outfits instantly</h3>
+        <p>Already live? Drop another item on the camera to change outfits mid-session. Swapping costs nothing extra.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+        <h3>Still looks like you</h3>
+        <p>The AI is instructed to change only the clothing and keep your face, hair, pose and background as they are. AI can make mistakes, so judge fit and colour with care.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <h3>Private by design</h3>
+        <p>The camera runs only while the panel is open and is never recorded. We read a product image only when you choose one, and we never read your browsing history.</p>
+      </article>
+      <article class="card2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div>
+        <h3>Your account, on any browser</h3>
+        <p>Sign in to keep your passes, name and purchase history with you. Open Trysee on another computer and everything is there.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section class="sec alt" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 class="big">Four steps from product page to “that looks good”</h2>
+    <ol class="steps">
+      <li><b>Install Trysee</b><span>Add the extension to Chrome. Nothing else to set up.</span></li>
+      <li><b>Open the AI fitting room</b><span>On any shop, click the <b>AI fitting room</b> tab on the left edge and allow your camera.</span></li>
+      <li><b>Pick something to try</b><span>Drag a clothing photo onto the camera view, or hover it and press <b>Try with Trysee</b>.</span></li>
+      <li><b>See it on you</b><span>Watch it live for 15 seconds, or switch to Photo for a still. Snapshot it, download it, or try the next item.</span></li>
+    </ol>
+
+    <div class="compare">
+      <div class="col">
+        <h3>Live mode</h3>
+        <ul>
+          <li>Real-time video of you in the clothes</li>
+          <li>15-second sessions, one pass each</li>
+          <li>Swap to another item without using another pass</li>
+          <li>Best for seeing movement, fit and drape</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Photo mode</h3>
+        <ul>
+          <li>One still image, ready to download</li>
+          <li>One pass per image</li>
+          <li>Best for comparing outfits side by side or sharing</li>
+          <li>Works with a single captured frame</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tips">
+      <h3>Tips for the best result</h3>
+      <ul>
+        <li>Stand facing the camera in good light, with your upper body in view.</li>
+        <li>Use clear product photos. A shot of the garment on a model or laid flat works best.</li>
+        <li>If a result looks off, try a different photo of the same item.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICING ============================ -->
+<section class="sec" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2 class="big">Simple passes. Pay only for what you try.</h2>
+    <p class="lead">One pass gets you one photo try-on <b>or</b> one 15-second live session. Your first pass is free. Buy more any time as a one-time pack. No subscription, and passes never expire.</p>
+
+    <!-- Keep these in sync with supabase/functions/trysee/plans.js -->
+    <div class="packs">
+      <div class="pack"><div class="n">10 passes</div><div class="p">$5.99</div><div class="pp">$0.60 per pass</div></div>
+      <div class="pack"><div class="n">25 passes</div><div class="p">$12.99</div><div class="pp">$0.52 per pass</div></div>
+      <div class="pack"><div class="n">55 passes</div><div class="p">$24.99</div><div class="pp">$0.45 per pass</div></div>
+      <div class="pack best"><span class="tagb">Best value</span><div class="n">120 passes</div><div class="p">$49.99</div><div class="pp">$0.42 per pass</div></div>
+    </div>
+
+    <ul class="ticks">
+      <li>If a try-on fails on our side, your pass is returned automatically.</li>
+      <li>Create a free account to buy passes. They are saved to it and work on any browser.</li>
+      <li>Payments go through a secure checkout. We never see your card details.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec alt" id="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow">Questions</p>
+    <h2 class="big">Good to know</h2>
+
+    <details><summary>Which browsers and websites does it work on?</summary><p>Trysee is a Chrome extension and also works in other Chromium-based browsers such as Edge and Brave. It works on shopping sites that show product photos, including Amazon, Flipkart, Myntra, Zara, Nike and Meesho, with no store partnership needed. Some sites block automated tools and may behave differently, so tell us if a store doesn't work for you.</p></details>
+    <details><summary>Do I need an account?</summary><p>No, you can try it with your 1 free pass straight away. You need a free account (email and password) to buy passes and to use your passes on other browsers. Passes you already have move into your account when you sign in.</p></details>
+    <details><summary>Do you keep my photos?</summary><p>Trysee does not store your camera frames or the results. When you start a try-on, one frame and the product image are sent to our AI provider to generate the result. See the <a href="privacy.html">Privacy Policy</a> for the details.</p></details>
+    <details><summary>Is my camera always on?</summary><p>No. The camera only runs while the fitting-room panel is open, and closing or minimising the panel switches it off. Nothing is recorded.</p></details>
+    <details><summary>How accurate is it?</summary><p>It is AI, so it can make mistakes with fit, colour or details, especially with busy patterns or unusual garments. Use it to get a feel for an item, and check size guides before you buy.</p></details>
+    <details><summary>What happens if a try-on fails?</summary><p>Your pass is refunded automatically, and you will see a message explaining what went wrong.</p></details>
+    <details><summary>Is there a subscription?</summary><p>No. Passes are one-time packs, they never expire, and there is nothing to cancel.</p></details>
+    <details><summary>I own a store. Can I add this to my website?</summary><p>Yes, we would love to talk. Email <a href="mailto:skandbuilds@gmail.com?subject=Virtual%20try-on%20for%20my%20store">skandbuilds@gmail.com</a>.</p></details>
+  </div>
+</section>
+
+<section class="sec cta-band">
+  <div class="wrap narrow center">
+    <h2 class="big">See it on you before you buy it</h2>
+    <p class="lead">Add Trysee to Chrome and try your first look free.</p>
+    <button class="btn dark" id="install2">Add to Chrome</button>
+    <a class="plain" href="example.html">or try the example store</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="logo small" href="index.html">Trysee</a>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="terms.html#acceptable-use">Acceptable Use Policy</a><a href="mailto:skandbuilds@gmail.com">Contact</a>
+    </nav>
+    <p>© <span id="yr"></span> Trysee. Store names are trademarks of their respective owners and are shown only to describe where Trysee works; Trysee is not affiliated with them.</p>
+  </div>
+</footer>
+
+<!-- ============================ try-on preview (used by every "Try On" button) ============================ -->
+<div class="tmodal" id="tm" hidden role="dialog" aria-modal="true" aria-labelledby="tm-title">
+  <div class="tm-card">
+    <button class="tm-x" id="tm-close" aria-label="Close">✕</button>
+    <h3 id="tm-title"></h3>
+    <div class="tm-stage">
+      <div class="tm-side"><small>The product</small><div class="tm-prod" id="tm-prod"></div></div>
+      <div class="tm-arrow">→</div>
+      <div class="tm-side"><small>On you</small>
+        <div class="tm-meframe"><div class="tm-me" id="tm-me"></div>
+          <div class="tm-loading"><span class="h-spin"></span>Dressing you up…</div>
+          <span class="h-live tm-live"><b></b>LIVE</span></div>
+      </div>
+    </div>
+    <p class="tm-note">This is an illustration. With the extension, you see the real item on your own camera.</p>
+    <div class="tm-actions"><button class="btn dark" id="install3">Add to Chrome</button><button class="btn light" id="tm-back">Back to products</button></div>
+  </div>
+</div>
+
+<div class="fit-tab" id="fit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg> AI fitting room <button id="fitX" aria-label="Hide">✕</button></div>
+
+<div class="modal" id="modal" hidden>
+  <div class="card">
+    <button class="close" id="mClose" aria-label="Close">✕</button>
+    <h3>Install Trysee</h3>
+    <ol>
+      <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
+      <li>Click <b>Load unpacked</b> and choose the <code>extension</code> folder.</li>
+      <li>On any shop, click the <b>AI fitting room</b> tab on the left edge and allow your camera.</li>
+      <li>Drag a clothing photo onto the camera view, or hover it and press <b>Try with Trysee</b>.</li>
+    </ol>
+    <a class="btn dark" href="example.html">Try the example store</a>
+  </div>
+</div>
+<script src="landing.js"></script>
+<script>
+  const m = document.getElementById('modal');
+  // Once published, set this to the Chrome Web Store listing URL: the buttons then go straight to the store.
+  const CHROME_STORE_URL = "";
+  const install = () => { document.getElementById('tm').hidden = true; document.body.style.overflow = ""; if (CHROME_STORE_URL) location.href = CHROME_STORE_URL; else m.hidden = false; };
+  for (const id of ['install', 'install2', 'install3']) document.getElementById(id).onclick = install;
+  document.getElementById('mClose').onclick = () => m.hidden = true;
+  m.onclick = e => { if (e.target === m) m.hidden = true; };
+  document.getElementById('fitX').onclick = () => document.getElementById('fit').remove();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
