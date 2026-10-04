@@ -47,6 +47,46 @@
   <h2>Email</h2>
   <p><a href="mailto:skandbuilds@gmail.com">skandbuilds@gmail.com</a><br>We aim to reply within 2 business days.</p>
 
+  <h2>Send us a message</h2>
+  <form id="cf" class="cform" action="https://formspree.io/f/mrpezdrg" method="POST">
+    <label>Your name<input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+    <label>Your email<input name="email" type="email" maxlength="120" autocomplete="email" required></label>
+    <label>Topic
+      <select name="topic" required>
+        <option value="Support">Help with Trysee</option>
+        <option value="Billing">Billing or a payment</option>
+        <option value="Report misuse">Report misuse</option>
+        <option value="Store or partnership">I own a store / partnership</option>
+        <option value="Other">Something else</option>
+      </select>
+    </label>
+    <label>Message<textarea name="message" rows="6" maxlength="4000" placeholder="Tell us what happened. For a try-on problem, include the website you were on. For a payment question, include your payment reference and account email." required></textarea></label>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+    <input type="hidden" name="_subject" value="Trysee contact form">
+    <button type="submit" id="cfGo">Send message</button>
+    <p id="cfMsg" class="cmsg" role="status" aria-live="polite"></p>
+    <p class="cnote">We use your details only to reply. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </form>
+  <script>
+    (function () {
+      var f = document.getElementById("cf"), msg = document.getElementById("cfMsg"), go = document.getElementById("cfGo");
+      f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        go.disabled = true; msg.className = "cmsg"; msg.textContent = "Sending…";
+        fetch(f.action, { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (r) {
+            if (r.ok) { f.reset(); msg.className = "cmsg ok"; msg.textContent = "Thanks! Your message is on its way. We aim to reply within 2 business days."; go.disabled = false; return; }
+            throw new Error((r.j.errors && r.j.errors.map(function (x) { return x.message; }).join(", ")) || "");
+          })
+          .catch(function (err) {
+            go.disabled = false; msg.className = "cmsg err";
+            msg.innerHTML = (err && err.message ? err.message + " " : "Couldn't send your message. ") + 'Please try again, or email <a href="mailto:skandbuilds@gmail.com">skandbuilds@gmail.com</a>.';
+          });
+      });
+    })();
+  </script>
+
   <h2>What to include</h2>
   <ul>
     <li>The email address of your Trysee account</li>
