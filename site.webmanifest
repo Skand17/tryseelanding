@@ -1,0 +1,21 @@
+{
+  "name": "Trysee",
+  "short_name": "Trysee",
+  "description": "Trysee is a Chrome extension for AI virtual try-on. See clothes from Amazon, Myntra, Flipkart and any online store on you, live or as a photo. First try free.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#fff7f5",
+  "theme_color": "#1c0609",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

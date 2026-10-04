@@ -143,7 +143,7 @@ const pill = (k) => `<span class="tp" data-try="${k}" role="button" tabindex="0"
         $(".pp", p).textContent = (c === "INR" ? "₹" + Math.round(price / passes) : "$" + (price / passes).toFixed(2)) + " per pass";
       }
       $$("#curSwitch button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cur === c)));
-      $("#curNote").textContent = c === "INR" ? "Prices in Indian rupees (UPI, cards, netbanking, wallets)." : "Prices in US dollars.";
+      $("#curNote").textContent = c === "INR" ? "Prices in Indian rupees (UPI, cards, netbanking, wallets)." : "Prices in US dollars. Checkout outside India is not open yet.";
     };
     let saved = null; try { saved = localStorage.getItem("trysee-cur"); } catch {}
     const india = /^Asia\/(Kolkata|Calcutta)$/.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "");

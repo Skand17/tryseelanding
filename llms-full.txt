@@ -1,0 +1,59 @@
+# Trysee: full description
+
+Trysee (https://trysee.app) is an AI virtual try-on extension for Google Chrome and other Chromium browsers (Edge, Brave). It adds an "AI fitting room" panel to the online shopping pages people already use, so a shopper can see a clothing item, pair of glasses or accessory on themselves before buying it, without leaving the page.
+
+## How it works
+1. Install the extension from the Chrome Web Store.
+2. On any shop, open the "AI fitting room" tab on the left edge of the page and allow the camera.
+3. Hover a product photo and press "Try with Trysee", or drag the photo onto the camera view.
+4. Watch the item on you live for 15 seconds, or switch to Photo mode for a still image you can save. Swap to another item mid-session at no extra cost.
+
+## What it can do
+- Live video try-on: real-time video of you wearing the item (15-second sessions).
+- Photo try-on: one still image per pass, ready to download.
+- Works on any store that shows product photos, including Amazon, Flipkart, Myntra, AJIO, Zara, Nike and Meesho. No partnership with stores is needed. Trysee is not affiliated with those stores.
+- Clothes, glasses and accessories. Results are best on tops and outerwear.
+- Keeps your face, hair, pose and background; only the clothing is changed. AI can make mistakes with fit, colour and detail, so check size guides before buying.
+- Accounts: sign in with email and password to keep passes, name and purchase history across browsers.
+
+## Pricing
+One pass = one photo try-on or one 15-second live session. Every new user gets 1 free pass. Packs are one-time purchases with no subscription and no expiry:
+- 10 passes: INR 499 (about INR 50 per pass)
+- 25 passes: INR 1,099 (about INR 44 per pass)
+- 55 passes: INR 2,099 (about INR 38 per pass)
+- 120 passes: INR 4,199 (about INR 35 per pass)
+Purchases are currently available in India through Razorpay. Purchases from other countries are not open yet. If a try-on fails on Trysee's side the pass is returned automatically; otherwise purchases are final (see https://trysee.app/refund.html).
+
+## Privacy and responsible use
+The camera runs only while the panel is open and nothing is recorded. Trysee does not store camera frames or generated results; for each try-on one frame and the product image are processed by the AI provider (Decart) to generate the result. Trysee is for adults and for use on yourself or with the clear consent of the person shown. Intimate, swim, see-through and revealing items are not allowed and are blocked automatically; repeated blocked requests pause the account for 24 hours; saved images carry an "AI-generated" mark. Misuse can be reported to skandbuilds@gmail.com. Full details: https://trysee.app/privacy.html and https://trysee.app/terms.html.
+
+## Frequently asked questions
+### Which browsers and websites does it work on?
+Trysee is a Chrome extension and also works in other Chromium-based browsers such as Edge and Brave. It works on shopping sites that show product photos, including Amazon, Flipkart, Myntra, Zara, Nike and Meesho, with no store partnership needed. Some sites block automated tools and may behave differently, so tell us if a store doesn't work for you.
+
+### Do I need an account?
+No, you can try it with your 1 free pass straight away. You need a free account (email and password) to buy passes and to use your passes on other browsers. Passes you already have move into your account when you sign in.
+
+### Do you keep my photos?
+Trysee does not store your camera frames or the results. When you start a try-on, one frame and the product image are sent to our AI provider to generate the result. See the Privacy Policy for the details.
+
+### Is my camera always on?
+No. The camera only runs while the fitting-room panel is open, and closing or minimising the panel switches it off. Nothing is recorded.
+
+### How do you prevent misuse?
+Trysee is for adults, and you confirm that you will only use it on yourself or with consent before you start. Intimate, swim, see-through and revealing items are blocked automatically, repeated blocked requests pause the account for 24 hours, saved images carry an "AI-generated" mark, and misuse can be reported to skandbuilds@gmail.com. No system is perfect, so we act quickly on every report. See the Acceptable Use Policy.
+
+### How accurate is it?
+It is AI, so it can make mistakes with fit, colour or details, especially with busy patterns or unusual garments. Use it to get a feel for an item, and check size guides before you buy.
+
+### What happens if a try-on fails?
+Your pass is refunded automatically, and you will see a message explaining what went wrong.
+
+### Is there a subscription?
+No. Passes are one-time packs, they never expire, and there is nothing to cancel.
+
+### I own a store. Can I add this to my website?
+Yes, we would love to talk. Email skandbuilds@gmail.com.
+
+## Operator and contact
+Trysee is operated by Skand Mishra, an independent sole proprietor. Support, billing, partnerships and misuse reports: skandbuilds@gmail.com. Contact page: https://trysee.app/contact.html

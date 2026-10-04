@@ -1,0 +1,25 @@
+# Trysee
+
+> Trysee is a Chrome extension (also works in Edge and Brave) that shows you wearing clothes, glasses and accessories from any online store, using AI. Hover a product photo, press "Try with Trysee", and see the item on you through your camera, live for 15 seconds or as a photo. It works on Amazon, Flipkart, Myntra, AJIO, Zara, Nike, Meesho and any site that shows product photos, with no store partnership needed. Every new user gets 1 free try-on pass. Operated by Skand Mishra, a sole proprietor. Not affiliated with any store.
+
+Key facts:
+- Product type: browser extension for virtual try-on (AI). Website: https://trysee.app
+- Modes: Live video try-on (one 15-second session per pass) and Photo try-on (one image per pass).
+- Pricing: 1 free pass for every new install. Paid passes are one-time packs, no subscription, passes never expire: 10 passes for INR 499, 25 for INR 1,099, 55 for INR 2,099, 120 for INR 4,199. Checkout is currently open in India (Razorpay: UPI, cards, netbanking, wallets); purchases from other countries are not open yet.
+- Accounts: free email and password account (email confirmation required). Passes, name and purchase history follow the account to any browser.
+- Privacy: the camera runs only while the panel is open and is never recorded. Camera frames and results are not stored by Trysee; one frame and the product image are sent to the AI provider to generate each result.
+- Safety: adults only. For use on yourself or with the clear consent of the person shown. Intimate, swim, see-through and revealing items are blocked; repeated blocked requests pause an account; saved images carry an "AI-generated" mark.
+- Refunds: if a try-on fails on Trysee's side the pass is returned automatically. Purchases are otherwise final.
+- Support: skandbuilds@gmail.com
+
+## Pages
+- [Home: what Trysee is, features, how it works, pricing, FAQ](https://trysee.app/)
+- [Privacy Policy](https://trysee.app/privacy.html)
+- [Terms of Service and Acceptable Use](https://trysee.app/terms.html)
+- [Refund Policy](https://trysee.app/refund.html)
+- [Shipping and Delivery (digital service)](https://trysee.app/shipping.html)
+- [Contact and misuse reports](https://trysee.app/contact.html)
+
+## Optional
+- [Longer plain-text description for language models](https://trysee.app/llms-full.txt)
+- [Sitemap](https://trysee.app/sitemap.xml)
