@@ -107,6 +107,7 @@
     <h2 class="big">Shop where you already shop.</h2>
     <p class="lead">Browse your favorite stores, then try the products on yourself with Trysee.</p>
     <div class="stores" id="stores"></div>
+    <p class="guides">Store guides: <a href="virtual-try-on-for-myntra.html">Myntra</a> · <a href="virtual-try-on-for-amazon.html">Amazon</a> · <a href="virtual-try-on-for-flipkart.html">Flipkart</a> · <a href="virtual-try-on-for-ajio.html">AJIO</a> · <a href="virtual-try-on-for-meesho.html">Meesho</a></p>
     <p class="fine">Illustrative products and prices. Store names belong to their owners; Trysee is not affiliated with or endorsed by them.</p>
   </div>
 </section>
@@ -387,6 +388,7 @@
   document.getElementById('mClose').onclick = () => m.hidden = true;
   m.onclick = e => { if (e.target === m) m.hidden = true; };
   document.getElementById('fitX').onclick = () => document.getElementById('fit').remove();
+  if (location.hash === "#get") install();
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>

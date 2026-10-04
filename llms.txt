@@ -14,6 +14,11 @@ Key facts:
 
 ## Pages
 - [Home: what Trysee is, features, how it works, pricing, FAQ](https://trysee.app/)
+- [Virtual try-on for Myntra](https://trysee.app/virtual-try-on-for-myntra.html)
+- [Virtual try-on for Amazon](https://trysee.app/virtual-try-on-for-amazon.html)
+- [Virtual try-on for Flipkart](https://trysee.app/virtual-try-on-for-flipkart.html)
+- [Virtual try-on for AJIO](https://trysee.app/virtual-try-on-for-ajio.html)
+- [Virtual try-on for Meesho](https://trysee.app/virtual-try-on-for-meesho.html)
 - [Privacy Policy](https://trysee.app/privacy.html)
 - [Terms of Service and Acceptable Use](https://trysee.app/terms.html)
 - [Refund Policy](https://trysee.app/refund.html)

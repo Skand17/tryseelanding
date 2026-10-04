@@ -55,5 +55,12 @@ No. Passes are one-time packs, they never expire, and there is nothing to cancel
 ### I own a store. Can I add this to my website?
 Yes, we would love to talk. Email skandbuilds@gmail.com.
 
+## Store guides
+- [Virtual try-on for Myntra](https://trysee.app/virtual-try-on-for-myntra.html)
+- [Virtual try-on for Amazon](https://trysee.app/virtual-try-on-for-amazon.html)
+- [Virtual try-on for Flipkart](https://trysee.app/virtual-try-on-for-flipkart.html)
+- [Virtual try-on for AJIO](https://trysee.app/virtual-try-on-for-ajio.html)
+- [Virtual try-on for Meesho](https://trysee.app/virtual-try-on-for-meesho.html)
+
 ## Operator and contact
 Trysee is operated by Skand Mishra, an independent sole proprietor. Support, billing, partnerships and misuse reports: skandbuilds@gmail.com. Contact page: https://trysee.app/contact.html

@@ -230,3 +230,6 @@ svg { max-width: 100%; }
 .curswitch button { border: 0; background: #fff; color: var(--ink); padding: 8px 18px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
 .curswitch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .curnote { margin: 0 0 22px; font-size: 13px; color: #8a7f81; }
+
+.guides { margin: 18px 0 4px; font-size: 14px; color: #5a4a4d; }
+.guides a { color: #8b2a5f; text-decoration: underline; }
