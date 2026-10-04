@@ -224,3 +224,9 @@ svg { max-width: 100%; }
 .get-steps em { font-style: normal; font-weight: 600; color: var(--ink); }
 .card.get .btn { width: 100%; height: 52px; }
 .get-tip { margin: 14px 0 0; font-size: 13px; color: #8a7f81; text-align: center; }
+
+/* currency switch above the price packs */
+.curswitch { display: inline-flex; border: 1px solid var(--ink); border-radius: 99px; overflow: hidden; margin: 0 0 8px; }
+.curswitch button { border: 0; background: #fff; color: var(--ink); padding: 8px 18px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.curswitch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.curnote { margin: 0 0 22px; font-size: 13px; color: #8a7f81; }

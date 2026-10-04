@@ -132,6 +132,29 @@ const pill = (k) => `<span class="tp" data-try="${k}" role="button" tabindex="0"
   fillFlat($("#j-img"), "amazon");
   $("#j-me").innerHTML = person(P.amazon.type, P.amazon.c);
 
+  // ---- pricing currency: rupees for India (detected from the time zone), dollars elsewhere; the visitor can switch ----
+  {
+    const packs = $$("#packs .pack");
+    const fmt = (n, c) => (c === "INR" ? "₹" + Math.round(n).toLocaleString("en-IN") : "$" + (Number.isInteger(n) ? n : n.toFixed(2)));
+    const setCur = (c) => {
+      for (const p of packs) {
+        const passes = +p.dataset.passes, price = +p.dataset[c.toLowerCase()];
+        $(".p", p).textContent = fmt(price, c);
+        $(".pp", p).textContent = (c === "INR" ? "₹" + Math.round(price / passes) : "$" + (price / passes).toFixed(2)) + " per pass";
+      }
+      $$("#curSwitch button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cur === c)));
+      $("#curNote").textContent = c === "INR" ? "Prices in Indian rupees (UPI, cards, netbanking, wallets)." : "Prices in US dollars.";
+    };
+    let saved = null; try { saved = localStorage.getItem("trysee-cur"); } catch {}
+    const india = /^Asia\/(Kolkata|Calcutta)$/.test(Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+    setCur(saved === "USD" || saved === "INR" ? saved : india ? "INR" : "USD");
+    $("#curSwitch").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      setCur(b.dataset.cur);
+      try { localStorage.setItem("trysee-cur", b.dataset.cur); } catch {}
+    });
+  }
+
   // ---- try-on modal (shared by every "Try On" button) ----
   const modal = $("#tm");
   let timer = null;

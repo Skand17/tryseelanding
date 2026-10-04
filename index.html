@@ -264,18 +264,21 @@
     <h2 class="big">Simple passes. Pay only for what you try.</h2>
     <p class="lead">One pass gets you one photo try-on <b>or</b> one 15-second live session. Your first pass is free. Buy more any time as a one-time pack. No subscription, and passes never expire.</p>
 
-    <!-- Keep these in sync with the `inr` prices in supabase/functions/trysee/plans.js -->
-    <div class="packs">
-      <div class="pack"><div class="n">10 passes</div><div class="p">₹499</div><div class="pp">₹50 per pass</div></div>
-      <div class="pack"><div class="n">25 passes</div><div class="p">₹1,099</div><div class="pp">₹44 per pass</div></div>
-      <div class="pack"><div class="n">55 passes</div><div class="p">₹2,099</div><div class="pp">₹38 per pass</div></div>
-      <div class="pack best"><span class="tagb">Best value</span><div class="n">120 passes</div><div class="p">₹4,199</div><div class="pp">₹35 per pass</div></div>
+    <div class="curswitch" id="curSwitch" role="group" aria-label="Currency"><button data-cur="INR" aria-pressed="true">₹ INR</button><button data-cur="USD" aria-pressed="false">$ USD</button></div>
+    <p class="curnote" id="curNote">Prices in Indian rupees (UPI, cards, netbanking, wallets).</p>
+
+    <!-- Keep these in sync with supabase/functions/trysee/plans.js (price = USD, inr = rupees). JS fills in the chosen currency. -->
+    <div class="packs" id="packs">
+      <div class="pack" data-passes="10" data-inr="499" data-usd="5.99"><div class="n">10 passes</div><div class="p">₹499</div><div class="pp">₹50 per pass</div></div>
+      <div class="pack" data-passes="25" data-inr="1099" data-usd="12.99"><div class="n">25 passes</div><div class="p">₹1,099</div><div class="pp">₹44 per pass</div></div>
+      <div class="pack" data-passes="55" data-inr="2099" data-usd="24.99"><div class="n">55 passes</div><div class="p">₹2,099</div><div class="pp">₹38 per pass</div></div>
+      <div class="pack best" data-passes="120" data-inr="4199" data-usd="49.99"><span class="tagb">Best value</span><div class="n">120 passes</div><div class="p">₹4,199</div><div class="pp">₹35 per pass</div></div>
     </div>
 
     <ul class="ticks">
       <li>If a try-on fails on our side, your pass is returned automatically. All purchases are final (see the <a href="refund.html">refund policy</a>), so try your free pass first.</li>
       <li>Create a free account to buy passes. They are saved to it and work on any browser.</li>
-      <li>Pay with UPI, cards, netbanking or wallets through a secure checkout (Razorpay). Prices are in Indian rupees, and we never see your card details.</li>
+      <li>Secure checkout: UPI, cards, netbanking or wallets in India, and cards elsewhere. We never see your card details.</li>
     </ul>
   </div>
 </section>
@@ -290,6 +293,7 @@
     <details><summary>Do I need an account?</summary><p>No, you can try it with your 1 free pass straight away. You need a free account (email and password) to buy passes and to use your passes on other browsers. Passes you already have move into your account when you sign in.</p></details>
     <details><summary>Do you keep my photos?</summary><p>Trysee does not store your camera frames or the results. When you start a try-on, one frame and the product image are sent to our AI provider to generate the result. See the <a href="privacy.html">Privacy Policy</a> for the details.</p></details>
     <details><summary>Is my camera always on?</summary><p>No. The camera only runs while the fitting-room panel is open, and closing or minimising the panel switches it off. Nothing is recorded.</p></details>
+    <details><summary>How do you prevent misuse?</summary><p>Trysee is for adults, and you confirm that you will only use it on yourself or with consent before you start. Intimate, swim, see-through and revealing items are blocked automatically, repeated blocked requests pause the account for 24 hours, saved images carry an "AI-generated" mark, and misuse can be reported to <a href="mailto:skandbuilds@gmail.com?subject=Trysee%20misuse%20report">skandbuilds@gmail.com</a>. No system is perfect, so we act quickly on every report. See the <a href="terms.html#acceptable-use">Acceptable Use Policy</a>.</p></details>
     <details><summary>How accurate is it?</summary><p>It is AI, so it can make mistakes with fit, colour or details, especially with busy patterns or unusual garments. Use it to get a feel for an item, and check size guides before you buy.</p></details>
     <details><summary>What happens if a try-on fails?</summary><p>Your pass is refunded automatically, and you will see a message explaining what went wrong.</p></details>
     <details><summary>Is there a subscription?</summary><p>No. Passes are one-time packs, they never expire, and there is nothing to cancel.</p></details>
