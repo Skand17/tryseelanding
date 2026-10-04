@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Reset password – Trysee</title>
+<link rel="stylesheet" href="legal.css">
+<style>form{display:grid;gap:12px;max-width:340px;margin:20px auto;text-align:left}input{padding:11px;border:1px solid #d8c9c6;border-radius:10px;font:inherit}button{padding:12px;border:0;border-radius:99px;background:#2b2023;color:#fff;font:inherit;font-weight:600;cursor:pointer}#m{min-height:1.4em}.err{color:#b3261e}.ok{color:#1b7a43}</style>
+</head>
+<body>
+<main style="text-align:center;margin-top:12vh">
+  <h1>Choose a new password</h1>
+  <form id="f" hidden>
+    <input id="p1" type="password" minlength="8" maxlength="72" autocomplete="new-password" placeholder="New password (8+ characters)" required>
+    <input id="p2" type="password" minlength="8" maxlength="72" autocomplete="new-password" placeholder="Repeat password" required>
+    <button id="go">Save password</button>
+  </form>
+  <p id="m"></p>
+  <p><a href="index.html">Back to Trysee</a></p>
+</main>
+<script>
+  var SB = "https://kgxklwpqcropiprelklc.supabase.co", KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtneGtsd3BxY3JvcGlwcmVsa2xjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4NzAwMjIsImV4cCI6MjEwNjQ0NjAyMn0.KD49csjq0IGgfXYxmXhg-CtNVEHNsSZ6JirTjz2H8vc";
+  var h = new URLSearchParams(location.hash.slice(1)), token = h.get("access_token");
+  var f = document.getElementById("f"), m = document.getElementById("m");
+  history.replaceState(null, "", location.pathname); // keep the token out of the address bar and history
+  function say(t, c) { m.textContent = t; m.className = c || ""; }
+  if (token && h.get("type") === "recovery") f.hidden = false;
+  else say("This reset link is invalid or has expired. Open the extension and tap “Forgot password?” to get a new one.", "err");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var a = document.getElementById("p1").value, b = document.getElementById("p2").value;
+    if (a.length < 8) return say("Use at least 8 characters.", "err");
+    if (a !== b) return say("The two passwords don't match.", "err");
+    document.getElementById("go").disabled = true; say("Saving…");
+    fetch(SB + "/auth/v1/user", { method: "PUT", headers: { "Content-Type": "application/json", apikey: KEY, Authorization: "Bearer " + token }, body: JSON.stringify({ password: a }) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (r) {
+        if (!r.ok) { document.getElementById("go").disabled = false; return say(/different|same/i.test(r.j.msg || "") ? "Pick a password you haven't used before." : (r.j.msg || "Couldn't save the password. The link may have expired."), "err"); }
+        f.hidden = true; say("Password changed ✓ Go back to the extension and sign in.", "ok");
+      })
+      .catch(function () { document.getElementById("go").disabled = false; say("Couldn't reach Trysee. Check your connection and try again.", "err"); });
+  });
+</script>
+</body>
+</html>
