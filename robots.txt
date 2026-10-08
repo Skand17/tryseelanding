@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
 
 User-agent: GPTBot
 Allow: /
