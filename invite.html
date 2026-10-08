@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're Invited to Trysee – Get 1 Extra Credit</title>
+<meta name="description" content="A friend invited you to Trysee, the Chrome extension that shows clothes on you before you buy. Create a free account and get 1 extra credit.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://trysee.app/invite.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1c0609">
+<meta property="og:site_name" content="Trysee">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A friend invited you to Trysee">
+<meta property="og:description" content="See clothes on you before you buy. Create a free account and get 1 extra credit.">
+<meta property="og:url" content="https://trysee.app/invite.html">
+<meta property="og:image" content="https://trysee.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="landing.css">
+<style>
+  .inv-top { max-width: 1120px; margin: 0 auto; padding: 28px 24px 0; }
+  .inv-hero { padding: 56px 24px 40px; background: linear-gradient(170deg, #dfd6f2 0%, #f2c9ee 45%, #f6c6e0 100%); text-align: center; }
+  .inv-hero h1 { font-size: clamp(34px, 5vw, 56px); margin: 0 auto 16px; max-width: 760px; }
+  .inv-hero .lead { margin: 0 auto 28px; }
+  .inv-hero .btn { width: 240px; margin: 0 auto; }
+  .inv-hero .small { margin: 14px 0 0; font-size: 13px; color: var(--muted); }
+  .inv-code { display: inline-block; margin: 0 0 18px; padding: 6px 14px; border-radius: 99px; background: rgba(255,255,255,.7); font-size: 14px; }
+  .inv-steps { grid-template-columns: repeat(3, 1fr); margin: 0; }
+  @media (max-width: 640px) { .inv-steps { grid-template-columns: 1fr; } }
+  [hidden] { display: none !important; }
+  .inv-top { padding-bottom: 24px; }
+  .inv-top .logo { display: inline-block; }
+  .inv-steps span b { display: inline; font-size: inherit; margin: 0; }
+  .inv-note { margin: 24px 0 0; font-size: 14px; color: var(--muted); }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBV1WJNX7K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PBV1WJNX7K');
+</script>
+</head>
+<body>
+<div class="inv-top"><a class="logo" href="index.html">Trysee</a></div>
+
+<section class="inv-hero">
+  <p class="inv-code" id="invCode" hidden>Invite code: <b id="invCodeVal"></b></p>
+  <h1>A friend invited you to Trysee</h1>
+  <p class="lead">Create a free account and get 1 extra credit. Then see how clothes from any online store look on you before you buy.</p>
+  <button class="btn dark" id="install">Add Trysee to Chrome</button>
+  <p class="small">Free to start. No card needed.</p>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 class="big">Three steps to your bonus credit</h2>
+    <ol class="steps inv-steps">
+      <li><b>Add Trysee to Chrome</b><span>Install the free extension. It also works in Edge and Brave.</span></li>
+      <li><b>Create your account</b><span>Sign up in the extension with your email and confirm it. Your invite is applied and you get 1 extra credit.</span></li>
+      <li><b>Try something on</b><span>Hover a product photo on any shop and press <b>Try with Trysee</b>. When you make your first try-on, your friend gets 2 credits too.</span></li>
+    </ol>
+    <p class="inv-note">The extra credit is added when you sign up in the Trysee extension in this same browser, so install it and create your account there. Credits have no cash value and can be removed in cases of abuse. See the <a href="terms.html#referrals">Terms</a>. Prefer to manage things on the web? You can also use your <a href="account.html">account page</a> afterwards.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="logo small" href="index.html">Trysee</a>
+    <nav>
+      <a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Contact Us</a>
+    </nav>
+    <p>© <span id="yr"></span> Trysee. Trysee is an independent product and is not affiliated with any store.</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="card get" role="dialog" aria-modal="true" aria-labelledby="getTitle">
+    <button class="close" id="mClose" aria-label="Close">✕</button>
+    <h3 id="getTitle">Add Trysee to Chrome</h3>
+    <ol class="get-steps">
+      <li><b>Open the Chrome Web Store</b><span>Search for <em>Trysee</em> and open the extension page.</span></li>
+      <li><b>Click “Add to Chrome”</b><span>Then confirm with “Add extension”. It takes a few seconds.</span></li>
+      <li><b>Create your account</b><span>Open the extension and sign up with your email. Confirm it to get your credits, including your invite bonus.</span></li>
+      <li><b>Open any online store</b><span>Click the <b>AI fitting room</b> tab on the left edge of the page and allow your camera.</span></li>
+    </ol>
+    <a class="btn dark" id="storeLink" href="https://chromewebstore.google.com/search/Trysee" target="_blank" rel="noopener">Open Chrome Web Store</a>
+    <p class="get-tip">Tip: pin Trysee from the puzzle-piece menu to keep it one click away.</p>
+  </div>
+</div>
+<script src="ref.js"></script>
+<script>
+  const m = document.getElementById('modal');
+  // Paste the exact Chrome Web Store listing URL here (same value as in index.html): the button then goes straight to it and this dialog is skipped.
+  const CHROME_STORE_URL = "";
+  if (CHROME_STORE_URL) document.getElementById('storeLink').href = CHROME_STORE_URL;
+  const install = () => { if (CHROME_STORE_URL) location.href = CHROME_STORE_URL; else m.hidden = false; };
+  document.getElementById('install').onclick = install;
+  document.getElementById('mClose').onclick = () => m.hidden = true;
+  m.onclick = e => { if (e.target === m) m.hidden = true; };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') m.hidden = true; });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  try {
+    const ref = localStorage.getItem('trysee-ref');
+    if (ref) { document.getElementById('invCodeVal').textContent = ref; document.getElementById('invCode').hidden = false; }
+  } catch (e) {}
+</script>
+</body>
+</html>

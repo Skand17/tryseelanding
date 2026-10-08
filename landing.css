@@ -226,10 +226,24 @@ svg { max-width: 100%; }
 .get-tip { margin: 14px 0 0; font-size: 13px; color: #8a7f81; text-align: center; }
 
 /* currency switch above the price packs */
-.curswitch { display: inline-flex; border: 1px solid var(--ink); border-radius: 99px; overflow: hidden; margin: 0 0 8px; }
-.curswitch button { border: 0; background: #fff; color: var(--ink); padding: 8px 18px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
-.curswitch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .curnote { margin: 0 0 22px; font-size: 13px; color: #8a7f81; }
 
 .guides { margin: 18px 0 4px; font-size: 14px; color: #5a4a4d; }
 .guides a { color: #8b2a5f; text-decoration: underline; }
+
+/* credit packs: Free + four paid cards, compact feature lists */
+.packs { grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch; }
+.pack { padding: 28px 14px 20px; display: flex; flex-direction: column; }
+.pack .n { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.pack .cr { font-size: 18px; font-weight: 600; margin-top: 8px; }
+.pack .p { font-size: 34px; margin: 2px 0 2px; }
+.pack .pp { font-size: 13px; min-height: 18px; }
+.pack.pop { border: 2px solid var(--ink); box-shadow: 0 6px 22px rgba(60,20,50,.10); }
+.pack.free { background: #faf6f7; border-style: dashed; }
+.pf { list-style: none; padding: 14px 0 0; margin: 14px 0 0; border-top: 1px solid #f0e9eb; text-align: left; display: grid; gap: 7px; font-size: 13px; line-height: 1.35; color: var(--muted); }
+.pf li { position: relative; padding-left: 18px; }
+.pf li::before { content: "✓"; position: absolute; left: 0; color: #a8457f; font-weight: 700; }
+.pf li:first-child { color: var(--ink); font-weight: 600; }
+@media (max-width: 1000px) { .packs { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .packs { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .packs { grid-template-columns: 1fr; } }

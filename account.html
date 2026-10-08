@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Trysee Account – Credits, Invites and Orders</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://trysee.app/account.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1c0609">
+<link rel="stylesheet" href="account.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBV1WJNX7K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PBV1WJNX7K');
+</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="index.html">Trysee</a>
+  <div class="who" id="who" hidden>
+    <span id="whoEmail"></span>
+    <button type="button" class="link" id="signOut">Sign out</button>
+  </div>
+</header>
+
+<main id="main">
+  <p id="status" class="status" role="status" aria-live="polite"></p>
+
+  <!-- Loading -->
+  <section id="loading" class="panel" hidden><p class="muted">Loading…</p></section>
+
+  <!-- Signed out -->
+  <section id="auth" class="panel narrow" hidden aria-labelledby="authTitle">
+    <h1 id="authTitle">Your Trysee account</h1>
+    <p class="muted" id="authLead">Sign in to see your credits, buy more, redeem a promo code and invite friends. Use the same email you use in the extension.</p>
+    <div class="invitebanner" id="refBanner" hidden>A friend invited you. Create an account and confirm your email to get 1 extra credit.</div>
+
+    <form id="formIn" class="form" novalidate>
+      <label>Email<input id="inEmail" type="email" autocomplete="email" maxlength="120" required></label>
+      <label>Password<input id="inPass" type="password" autocomplete="current-password" maxlength="72" required></label>
+      <button type="submit" class="btn" id="inGo">Sign in</button>
+      <p class="alt"><button type="button" class="link" data-show="formUp">Create an account</button> · <button type="button" class="link" data-show="formForgot">Forgot password?</button></p>
+    </form>
+
+    <form id="formUp" class="form" hidden novalidate>
+      <label>Name (optional)<input id="upName" type="text" autocomplete="name" maxlength="80"></label>
+      <label>Email<input id="upEmail" type="email" autocomplete="email" maxlength="120" required></label>
+      <label>Password (8+ characters)<input id="upPass" type="password" autocomplete="new-password" minlength="8" maxlength="72" required></label>
+      <button type="submit" class="btn" id="upGo">Create account</button>
+      <p class="note">By creating an account you agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>. You get your free credit once you confirm your email.</p>
+      <p class="alt"><button type="button" class="link" data-show="formIn">I already have an account</button></p>
+    </form>
+
+    <form id="formForgot" class="form" hidden novalidate>
+      <label>Email<input id="fgEmail" type="email" autocomplete="email" maxlength="120" required></label>
+      <button type="submit" class="btn" id="fgGo">Send reset link</button>
+      <p class="alt"><button type="button" class="link" data-show="formIn">Back to sign in</button></p>
+    </form>
+  </section>
+
+  <!-- Signed in -->
+  <div id="app" hidden>
+    <section class="panel hero" aria-labelledby="balTitle">
+      <div>
+        <h1 id="balTitle" class="small-h">Your credits</h1>
+        <div class="bal"><span id="bal" aria-live="polite">–</span><small>credits</small></div>
+        <p class="muted" id="balHint">A Photo Try-On costs 1 credit. A 15-second Live Try-On costs 4. Credits do not expire.</p>
+      </div>
+      <p class="hello" id="hello"></p>
+    </section>
+
+    <div id="apiError" class="panel errbox" hidden role="alert">
+      <p id="apiErrorMsg">We couldn't reach Trysee just now.</p>
+      <button type="button" class="btn small" id="retry">Try again</button>
+    </div>
+
+    <section class="panel" aria-labelledby="buyTitle">
+      <h2 id="buyTitle">Buy credits</h2>
+      <p class="muted">One-time packs, no subscription. Prices are in Indian rupees (₹). Payments are currently accepted from India only, through a secure payment page (UPI, cards, netbanking, wallets).</p>
+      <div class="packs" id="packs" aria-busy="true"><p class="muted">Loading packs…</p></div>
+    </section>
+
+    <section class="panel" aria-labelledby="promoTitle">
+      <h2 id="promoTitle">Promo code</h2>
+      <form id="promoForm" class="inline" novalidate>
+        <label class="sr" for="promoCode">Promo code</label>
+        <input id="promoCode" type="text" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Enter a promo code">
+        <button type="submit" class="btn small" id="promoGo">Redeem</button>
+      </form>
+      <p class="note">Promo codes add bonus credits. Each code can be used once per account and may expire.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="invTitle">
+      <h2 id="invTitle">Invite friends</h2>
+      <p class="muted">Friends get 1 free credit. You get 2 when they make their first try-on.</p>
+      <div class="copyrow">
+        <input id="refLink" type="text" readonly aria-label="Your invite link" value="Loading…">
+        <button type="button" class="btn small" id="refCopy" disabled>Copy</button>
+      </div>
+      <p class="stats" id="refStats"></p>
+      <p class="note">Up to 20 referrals per month can earn rewards. Self-referrals and fake accounts are not allowed, and credits can be removed for abuse. See the <a href="terms.html#referrals">Terms</a>.</p>
+    </section>
+
+    <section class="panel" id="creatorSec" hidden aria-labelledby="crTitle">
+      <h2 id="crTitle">Creator dashboard</h2>
+      <p class="muted">You are part of the <a href="affiliate.html">Trysee creator program</a>. Always disclose that your link is a referral or affiliate link.</p>
+      <div class="copyrow">
+        <input id="crLink" type="text" readonly aria-label="Your creator link" value="">
+        <button type="button" class="btn small" id="crCopy">Copy</button>
+      </div>
+      <div class="kpis" id="crKpis"></div>
+      <h3>Recent commissions</h3>
+      <ul class="list" id="crRecent"></ul>
+      <p class="note" id="crNote"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="actTitle">
+      <h2 id="actTitle">Recent activity</h2>
+      <ul class="list" id="activity"><li class="muted">Loading…</li></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="ordTitle">
+      <h2 id="ordTitle">Purchase history</h2>
+      <ul class="list" id="orders"><li class="muted">Loading…</li></ul>
+      <p class="note">Questions about a payment? <a href="contact.html">Contact us</a> with your account email.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <a href="index.html">Home</a><a href="affiliate.html">Affiliate program</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refunds</a><a href="contact.html">Contact</a>
+</footer>
+<script src="ref.js"></script>
+<script src="account.js"></script>
+</body>
+</html>

@@ -1,15 +1,20 @@
 # Trysee
 
-> Trysee is a Chrome extension (also works in Edge and Brave) that shows you wearing clothes, glasses and accessories from any online store, using AI. Hover a product photo, press "Try with Trysee", and see the item on you through your camera, live for 15 seconds or as a photo. It works on Amazon, Flipkart, Myntra, AJIO, Zara, Nike, Meesho and any site that shows product photos, with no store partnership needed. Every new user gets 1 free try-on pass. Operated by Skand Mishra, a sole proprietor. Not affiliated with any store.
+> Trysee is a Chrome extension (also works in Edge and Brave) that shows you wearing clothes, glasses and accessories from any online store, using AI. Hover a product photo, press "Try with Trysee", and see the item on you through your camera, live for 15 seconds or as a photo. It works on Amazon, Flipkart, Myntra, AJIO, Zara, Nike, Meesho and any site that shows product photos, with no store partnership needed. Every confirmed free account gets 1 free AI Try-On credit. Operated by Skand Mishra, a sole proprietor. Not affiliated with any store.
 
 Key facts:
 - Product type: browser extension for virtual try-on (AI). Website: https://trysee.app
-- Modes: Live video try-on (one 15-second session per pass) and Photo try-on (one image per pass).
-- Pricing: 1 free pass for every new install. Paid passes are one-time packs, no subscription, passes never expire: 10 passes for INR 499, 25 for INR 1,099, 55 for INR 2,099, 120 for INR 4,199. Checkout is currently open in India (Razorpay: UPI, cards, netbanking, wallets); purchases from other countries are not open yet.
-- Accounts: free email and password account (email confirmation required). Passes, name and purchase history follow the account to any browser.
+- Modes: Live video try-on (4 credits for one 15-second session) and Photo try-on (1 credit per image).
+- Pricing: AI Try-On credits. 1 free credit (one-time) for every confirmed free account, enough for one Photo Try-On. Paid credits are one-time packs, no subscription, credits never expire: 5 credits for INR 99, 20 for INR 249, 50 for INR 499, 120 for INR 999. Checkout is currently open in India (Razorpay: UPI, cards, netbanking, wallets); purchases from other countries are not open yet.
+- Accounts: free email and password account (email confirmation required; the free credit is added once the email is confirmed). Credits, name and purchase history belong to the account and work in the extension on any browser.
 - Privacy: the camera runs only while the panel is open and is never recorded. Camera frames and results are not stored by Trysee; one frame and the product image are sent to the AI provider to generate each result.
 - Safety: adults only. For use on yourself or with the clear consent of the person shown. Intimate, swim, see-through and revealing items are blocked; repeated blocked requests pause an account; saved images carry an "AI-generated" mark.
-- Refunds: if a try-on fails on Trysee's side the pass is returned automatically. Purchases are otherwise final.
+- Refunds: if a try-on fails on Trysee's side the credits are returned automatically. Purchases are otherwise final.
+- More features: upload a photo instead of using the camera (used for that try-on only, not saved); save and compare looks in "My looks" (stored on the device, not on Trysee servers); an outfit builder; and a size helper that gives a rough size guess only (details stay on the device).
+- Referrals: every account has an invite link. A friend gets 1 free credit when they sign up with it and confirm their account; the inviter gets 2 credits when that friend completes their first try-on (up to 20 rewarded referrals per month). Self-referral and fake accounts are blocked.
+- Promo codes: credit-bonus codes only, one use per account, may expire. Redeemed in the extension or on the account page.
+- Account page: https://trysee.app/account.html (sign in to see credits, buy packs, redeem a promo code, get an invite link).
+- Affiliate program: invite-only creator program. Creators get a personal link and earn 15% of the net amount paid (after payment-processor fees, excluding taxes) on purchases made within 30 days of a referred person's sign-up. Monthly UPI or bank payouts from INR 500. Disclosure that the link is an affiliate link is required.
 - Support: skandbuilds@gmail.com
 
 ## Pages
@@ -19,6 +24,7 @@ Key facts:
 - [Virtual try-on for Flipkart](https://trysee.app/virtual-try-on-for-flipkart.html)
 - [Virtual try-on for AJIO](https://trysee.app/virtual-try-on-for-ajio.html)
 - [Virtual try-on for Meesho](https://trysee.app/virtual-try-on-for-meesho.html)
+- [Creator (affiliate) program](https://trysee.app/affiliate.html)
 - [Privacy Policy](https://trysee.app/privacy.html)
 - [Terms of Service and Acceptable Use](https://trysee.app/terms.html)
 - [Refund Policy](https://trysee.app/refund.html)

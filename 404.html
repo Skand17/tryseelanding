@@ -11,6 +11,13 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#1c0609">
 <link rel="stylesheet" href="/legal.css">
+<script>
+  // Short invite links: /r/CODE -> /invite.html?ref=CODE
+  (function () {
+    var m = /^\/r\/([A-Za-z0-9_-]{3,32})\/?$/.exec(location.pathname);
+    if (m) location.replace("/invite.html?ref=" + m[1]);
+  })();
+</script>
 </head>
 <body>
 <main style="text-align:center;margin-top:14vh">

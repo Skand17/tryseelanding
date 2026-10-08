@@ -6,23 +6,32 @@ Trysee (https://trysee.app) is an AI virtual try-on extension for Google Chrome 
 1. Install the extension from the Chrome Web Store.
 2. On any shop, open the "AI fitting room" tab on the left edge of the page and allow the camera.
 3. Hover a product photo and press "Try with Trysee", or drag the photo onto the camera view.
-4. Watch the item on you live for 15 seconds, or switch to Photo mode for a still image you can save. Swap to another item mid-session at no extra cost.
+4. Watch the item on you live for 15 seconds, or switch to Photo mode for a still image you can save. Swap to another item mid-session without using more credits.
 
 ## What it can do
-- Live video try-on: real-time video of you wearing the item (15-second sessions).
-- Photo try-on: one still image per pass, ready to download.
+- Live video try-on: real-time video of you wearing the item (4 credits per 15-second session).
+- Photo try-on: one still image for 1 credit, ready to download.
 - Works on any store that shows product photos, including Amazon, Flipkart, Myntra, AJIO, Zara, Nike and Meesho. No partnership with stores is needed. Trysee is not affiliated with those stores.
 - Clothes, glasses and accessories. Results are best on tops and outerwear.
 - Keeps your face, hair, pose and background; only the clothing is changed. AI can make mistakes with fit, colour and detail, so check size guides before buying.
-- Accounts: sign in with email and password to keep passes, name and purchase history across browsers.
+- Upload a photo: no camera needed. An uploaded photo is used for that try-on and is not saved by Trysee.
+- My looks and compare: saved looks stay on the device (in the browser's extension storage), not on Trysee servers. Looks can be compared side by side, and an outfit builder lets you combine items.
+- Size helper: a rough size guess from details you enter, which stay on your device. It is only a guess, so check the store's size chart.
+- Accounts: sign in with email and password to keep AI Try-On credits, name and purchase history across browsers. The account page (https://trysee.app/account.html) shows your credits, activity and purchases, lets you buy credit packs and redeem promo codes, and has your invite link.
 
 ## Pricing
-One pass = one photo try-on or one 15-second live session. Every new user gets 1 free pass. Packs are one-time purchases with no subscription and no expiry:
-- 10 passes: INR 499 (about INR 50 per pass)
-- 25 passes: INR 1,099 (about INR 44 per pass)
-- 55 passes: INR 2,099 (about INR 38 per pass)
-- 120 passes: INR 4,199 (about INR 35 per pass)
-Purchases are currently available in India through Razorpay. Purchases from other countries are not open yet. If a try-on fails on Trysee's side the pass is returned automatically; otherwise purchases are final (see https://trysee.app/refund.html).
+Trysee uses AI Try-On credits. A Photo Try-On costs 1 credit. A Live Try-On costs 4 credits for one 15-second session. Every confirmed free account (sign up with an email and confirm it) gets 1 free credit, one time, enough for one Photo Try-On. No card is needed. Credit packs are one-time purchases with no subscription, and credits never expire:
+- Starter: 5 credits for INR 99 (5 Photo Try-Ons or 1 Live Try-On; about INR 20 per credit)
+- Popular (most popular): 20 credits for INR 249 (20 Photo Try-Ons or 5 Live Try-Ons; about INR 12 per credit)
+- Value: 50 credits for INR 499 (50 Photo Try-Ons or 12 Live Try-Ons; about INR 10 per credit)
+- Power: 120 credits for INR 999 (120 Photo Try-Ons or 30 Live Try-Ons; about INR 8 per credit)
+Credits belong to your account and work in the extension on any browser.
+All prices are in Indian rupees (INR) and payments are currently accepted from India only, through Razorpay (UPI, cards, netbanking, wallets). If a try-on fails on Trysee's side the credits are returned automatically; otherwise purchases are final (see https://trysee.app/refund.html).
+
+## Referrals, promo codes and the affiliate program
+- Referrals: every account has an invite link. A friend gets 1 free credit when they sign up with it and confirm their account. The inviter gets 2 credits when that friend completes their first try-on. Rewards are available for at most 20 referrals per month. Self-referral and fake accounts are blocked, and credits can be removed for abuse. Credits have no cash value.
+- Promo codes: credit-bonus codes only. One use per account; a code may expire or have a use limit. Redeem it in the extension or on the account page.
+- Affiliate (creator) program: invite-only; applying does not guarantee acceptance. Creators get a personal link and earn 15% of the net amount paid (pack price minus payment-processor fees, excluding taxes) on purchases made within 30 days of the referred person's sign-up. Payouts are monthly by UPI or bank transfer once earnings reach INR 500; smaller amounts roll over. Creators must clearly disclose that their link is a referral or affiliate link, must not buy through their own link, spam, make misleading claims or bid on the Trysee trademark, and are responsible for their own taxes. Commissions can be withheld or reversed for abuse, refunds or chargebacks. Details and application form: https://trysee.app/affiliate.html
 
 ## Privacy and responsible use
 The camera runs only while the panel is open and nothing is recorded. Trysee does not store camera frames or generated results; for each try-on one frame and the product image are processed by the AI provider (Decart) to generate the result. Trysee is for adults and for use on yourself or with the clear consent of the person shown. Intimate, swim, see-through and revealing items are not allowed and are blocked automatically; repeated blocked requests pause the account for 24 hours; saved images carry an "AI-generated" mark. Misuse can be reported to skandbuilds@gmail.com. Full details: https://trysee.app/privacy.html and https://trysee.app/terms.html.
@@ -32,7 +41,10 @@ The camera runs only while the panel is open and nothing is recorded. Trysee doe
 Trysee is a Chrome extension and also works in other Chromium-based browsers such as Edge and Brave. It works on shopping sites that show product photos, including Amazon, Flipkart, Myntra, Zara, Nike and Meesho, with no store partnership needed. Some sites block automated tools and may behave differently, so tell us if a store doesn't work for you.
 
 ### Do I need an account?
-No, you can try it with your 1 free pass straight away. You need a free account (email and password) to buy passes and to use your passes on other browsers. Passes you already have move into your account when you sign in.
+Yes, a free account is how you get your free credit and buy credits. Sign up with your email, confirm it, and your 1 free AI Try-On credit is added. Credits belong to your account, so they work in the extension on any browser you sign in on.
+
+### How do credits work?
+A Photo Try-On costs 1 credit and a Live Try-On costs 4 credits for one 15-second session. Your free credit is enough for one Photo Try-On. Credit packs are one-time purchases and never expire.
 
 ### Do you keep my photos?
 Trysee does not store your camera frames or the results. When you start a try-on, one frame and the product image are sent to our AI provider to generate the result. See the Privacy Policy for the details.
@@ -47,20 +59,33 @@ Trysee is for adults, and you confirm that you will only use it on yourself or w
 It is AI, so it can make mistakes with fit, colour or details, especially with busy patterns or unusual garments. Use it to get a feel for an item, and check size guides before you buy.
 
 ### What happens if a try-on fails?
-Your pass is refunded automatically, and you will see a message explaining what went wrong.
+Your credits are returned automatically, and you will see a message explaining what went wrong.
 
 ### Is there a subscription?
-No. Passes are one-time packs, they never expire, and there is nothing to cancel.
+No. Credits are sold as one-time packs, they never expire, and there is nothing to cancel.
+
+### Can I try on without a camera?
+Yes. You can upload a photo of yourself and try the item on that instead. The photo is used for that try-on and is not saved by us.
+
+### Where are my saved looks stored?
+On your device only. Your saved looks, the size details you enter and the last frame the extension keeps all stay in your browser, and uninstalling the extension deletes them. We don't keep copies on our servers.
+
+### How do referral credits work?
+Every account has an invite link. Friends get 1 free credit when they sign up with it and confirm their account. You get 2 credits when that friend completes their first try-on, for up to 20 referrals per month. Self-referrals and fake accounts are blocked, and credits can be removed for abuse.
+
+### Do you have a promo code or affiliate program?
+Promo codes add bonus credits. Each code can be used once per account and may expire. Enter one in the extension or on your account page (https://trysee.app/account.html). We also run an invite-only creator program (https://trysee.app/affiliate.html) where creators earn a commission on purchases from people who sign up through their link.
 
 ### I own a store. Can I add this to my website?
 Yes, we would love to talk. Email skandbuilds@gmail.com.
 
-## Store guides
+## Store guides and program pages
 - [Virtual try-on for Myntra](https://trysee.app/virtual-try-on-for-myntra.html)
 - [Virtual try-on for Amazon](https://trysee.app/virtual-try-on-for-amazon.html)
 - [Virtual try-on for Flipkart](https://trysee.app/virtual-try-on-for-flipkart.html)
 - [Virtual try-on for AJIO](https://trysee.app/virtual-try-on-for-ajio.html)
 - [Virtual try-on for Meesho](https://trysee.app/virtual-try-on-for-meesho.html)
+- [Creator (affiliate) program](https://trysee.app/affiliate.html)
 
 ## Operator and contact
 Trysee is operated by Skand Mishra, an independent sole proprietor. Support, billing, partnerships and misuse reports: skandbuilds@gmail.com. Contact page: https://trysee.app/contact.html
